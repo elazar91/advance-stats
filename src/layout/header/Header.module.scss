@@ -1,0 +1,43 @@
+@use '../../variables.scss'as var;
+
+.header {
+  height: 100px;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  box-shadow: rgb(33 35 38 / 30%) 0px 10px 10px 0px;
+  background-color: var.$second-primary-color;
+
+  .nav {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    a {
+      display: inline-block;
+      position: relative;
+      color: var.$second-secondary-color;
+    }
+
+    a:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var.$second-secondary-color;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    a:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+}

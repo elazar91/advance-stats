@@ -1,0 +1,26 @@
+@use '../../variables.scss'as var;
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 50px;
+  background-color: var.$second-secondary-color;
+
+  .links {
+    width: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+    .linkedin {
+      width: 24px;
+      height: 24px;
+    }
+
+    .github {
+      background-image: url(../../photos/github-sign.png);
+      background-repeat: no-repeat;
+    }
+  }
+}
